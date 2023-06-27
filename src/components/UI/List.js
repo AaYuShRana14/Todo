@@ -5,7 +5,7 @@ const List = (props) => {
     const loadHandler=()=>{
         setLoad(!load);
     } 
-    const tasks = (props.list.map((item) => (<ListItem key={item.id} id={item.id} title={item.task}></ListItem>)));
+    const tasks = (props.list.map((item) => (<ListItem key={item.id} id={item.id} title={item.task} deleteTask={props.deleteTask}></ListItem>)));
     return (
         <>
             {load && tasks}
